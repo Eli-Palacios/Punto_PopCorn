@@ -9,7 +9,7 @@ body {
 /* ENCABEZADO */
 
 .encabezado {
-    background-color: #9b59b6;
+    background-color: #e0a7f7;
     color: white;
     padding: 35px;
 }
@@ -22,9 +22,24 @@ body {
 
 /* MENÚ */
 
+.barra-navegacion {
+    display: flex;
+    justify-content: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
+
+.barra-navegacion a {
+    flex-shrink: 0;
+}
+
 .menu {
-    background-color: #6c3483;
-    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #4a235a;
 }
 
 .menu a {
@@ -37,24 +52,22 @@ body {
 }
 
 
-/* BANNER */
+/* BANNER 
 
 .banner {
-    background-color: #d7bde2;
+    background-color: #cc91e7;
     height: 350px;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-    color: #4a235a;
+    color: #400046;
 }
 
 .banner h1 {
     font-size: 45px;
     font-weight: 700;
 }
-
+*/
 
 /* BOTONES */
 
