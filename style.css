@@ -132,6 +132,12 @@ body {
 
 /* SECCIÓN DE MATERIALES */
 
+.materiales .w3-content {
+    border-bottom: 5px solid #ddd;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
 .materiales {
     background-color: #f5eef7;
 }
@@ -154,7 +160,6 @@ body {
 .tarjeta-material i {
     color: #8e44ad;
 }
-
 
 /* PIE DE PÁGINA */
 
@@ -193,3 +198,4 @@ body {
         padding: 8px 5px !important;
     }
 }
+
