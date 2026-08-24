@@ -186,3 +186,10 @@ body {
     }
 
 }
+
+@media (max-width: 600px) {
+    .menu a {
+        font-size: 12px;
+        padding: 8px 5px !important;
+    }
+}
