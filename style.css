@@ -238,28 +238,40 @@ body {
 
 @media screen and (max-width: 600px) {
 
-    body {
-        padding-top: 82px;
-    }
-
     .barra-navegacion {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
     }
 
     .barra-navegacion a {
-        width: auto;
-        flex: 0 0 33.33%;
-        box-sizing: border-box;
+        width: auto !important;
         text-align: center;
         font-size: 12px;
         padding: 8px 2px !important;
     }
 
-    .barra-navegacion a:nth-child(4),
+    .barra-navegacion a:nth-child(1) {
+        grid-column: span 2;
+    }
+
+    .barra-navegacion a:nth-child(2) {
+        grid-column: span 2;
+    }
+
+    .barra-navegacion a:nth-child(3) {
+        grid-column: span 2;
+    }
+
+    .barra-navegacion a:nth-child(4) {
+        grid-column: 2 / span 2;
+    }
+
     .barra-navegacion a:nth-child(5) {
-        flex: 0 0 50%;
+        grid-column: 4 / span 2;
+    }
+
+    .encabezado {
+        padding-top: 100px;
     }
 
 }
