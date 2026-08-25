@@ -34,7 +34,7 @@ body {
 }
 
 .menu {
-    position: fixed;
+    position: sticky;
     top: 0;
     left: 0;
     width: 100%;
@@ -229,32 +229,27 @@ body {
 
 }
 
-/* MENÚ EN CELULAR */
 @media (max-width: 600px) {
-
-    .menu {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
+    .menu a {
+        font-size: 12px;
+        padding: 8px 5px !important;
     }
+}
+
+/* MENÚ FIJO EN CELULAR SIN TAPAR EL CONTENIDO */
+
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Menú en celular */
+@media (max-width: 600px) {
 
     .menu a {
         width: 50%;
         box-sizing: border-box;
-        text-align: center;
-    }
-
-}
-
-/* EVITAR QUE EL MENÚ TAPE EL CONTENIDO EN CELULAR */
-@media (max-width: 600px) {
-
-    body {
-        padding-top: 100px;
-    }
-
-    .menu {
-        position: relative;
     }
 
 }
