@@ -9,7 +9,7 @@ body {
 /* ENCABEZADO */
 
 .encabezado {
-    background-color: #e0a7f7;
+    background-color: #c890f5;
     color: white;
     padding: 35px;
 }
@@ -39,7 +39,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #4a235a;
+    background-color: #2f143a;
 }
 
 .menu a {
@@ -161,10 +161,47 @@ body {
     color: #8e44ad;
 }
 
+/* SECCIÓN COMENTARIOS */
+
+.comentarios {
+    padding: 40px 20px;
+}
+
+.formulario-google {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.formulario-google iframe {
+    width: 100%;
+    max-width: 640px;
+    min-height: 565px;
+    border: none;
+    border-radius: 15px;
+}
+
+/* COMENTARIOS 
+
+.comentarios {
+    padding: 30px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.comentarios input,
+.comentarios textarea {
+    border-radius: 10px;
+}
+
+.boton {
+    border-radius: 10px;
+} */
+
 /* PIE DE PÁGINA */
 
 .pie-pagina {
-    background-color: #4a235a;
+    background-color: #2f143a;
     color: white;
 
     text-align: center;
