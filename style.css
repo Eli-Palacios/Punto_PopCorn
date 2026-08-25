@@ -229,10 +229,20 @@ body {
 
 }
 
+/* MENÚ EN CELULAR */
 @media (max-width: 600px) {
-    .menu a {
-        font-size: 12px;
-        padding: 8px 5px !important;
+
+    .menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
+
+    .menu a {
+        width: 50%;
+        box-sizing: border-box;
+        text-align: center;
+    }
+
 }
 
