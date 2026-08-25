@@ -246,3 +246,15 @@ body {
 
 }
 
+/* EVITAR QUE EL MENÚ TAPE EL CONTENIDO EN CELULAR */
+@media (max-width: 600px) {
+
+    body {
+        padding-top: 100px;
+    }
+
+    .menu {
+        position: relative;
+    }
+
+}
