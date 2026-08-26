@@ -237,15 +237,16 @@ body {
 
     /* MENÚ */
     .menu {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        z-index: 1000;
-
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-    }
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: #7D73B7;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    overflow: hidden;
+}
 
     .menu a {
         width: auto !important;
