@@ -6,12 +6,24 @@ body {
 }
 
 
-/* ENCABEZADO */
+/* ENCABEZADO 
 
 .encabezado {
     background-color: #c49ef5;
     color: white;
     padding: 35px;
+}*/
+
+.encabezado {
+    background-image: url("Imagenes/header3.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
 }
 
 .encabezado h1 {
@@ -39,7 +51,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #7e4594;
+    background-color: #A64D9B;
 }
 
 .menu a {
@@ -72,12 +84,12 @@ body {
 /* BOTONES */
 
 .boton {
-    background-color: #8e44ad;
+    background-color: rgb(69, 33, 83);
     color: white;
 }
 
 .boton:hover {
-    background-color: #6c3483;
+    background-color: rgb(39, 19, 48);
 }
 
 
@@ -114,13 +126,10 @@ body {
 
 .espacio-imagen {
     height: 220px;
-
     background-color: #eadcf0;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
     color: #6c3483;
 }
 
@@ -201,7 +210,7 @@ body {
 /* PIE DE PÁGINA */
 
 .pie-pagina {
-    background-color: #7e4594;
+    background-color: #A64D9B;
     color: white;
 
     text-align: center;
@@ -274,4 +283,10 @@ body {
         padding-top: 100px;
     }
 
+}
+
+@media (min-width: 769px) {
+    .encabezado {
+        min-height: 300px;
+    }
 }
