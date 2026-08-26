@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Punto Popcorn</title>
+
+    <style>
+
+        /* =========================
+           ESTILOS GENERALES
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff8f2;
+            color: #4a2c20;
+        }
+
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 35px 20px 25px;
+            background-color: #f7d9c4;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+            color: #6b3e2e;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           NAVEGACIÓN
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 15px;
+            background-color: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #6b3e2e;
+            background-color: #f7d9c4;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #e9b89f;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           SECCIÓN PRINCIPAL
+        ========================= */
+
+        .inicio {
+            text-align: center;
+            padding: 55px 20px 35px;
+        }
+
+        .inicio h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #6b3e2e;
+        }
+
+        .inicio p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           PRODUCTOS
+        ========================= */
+
+        .productos {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+        }
+
+        .productos h2 {
+            text-align: center;
+            font-size: 30px;
+            color: #6b3e2e;
+            margin-bottom: 30px;
+        }
+
+        /* 4 productos por fila en computadora */
+
+        .contenedor-productos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+
+        /* =========================
+           TARJETAS
+        ========================= */
+
+        .producto {
+            background-color: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .producto:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 7px 18px rgba(0, 0, 0, 0.18);
+        }
+
+        .producto img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .info-producto {
+            padding: 18px;
+        }
+
+        .info-producto h3 {
+            margin: 0 0 8px;
+            font-size: 20px;
+            color: #6b3e2e;
+        }
+
+        .info-producto p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .precio {
+            display: block;
+            margin-top: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #c06c52;
+        }
+
+
+        /* =========================
+           SOBRE MÍ
+        ========================= */
+
+        .sobre-mi {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .sobre-mi h2 {
+            color: #6b3e2e;
+            font-size: 30px;
+        }
+
+        .sobre-mi p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
+           CONTACTO
+        ========================= */
+
+        .contacto {
+            text-align: center;
+            padding: 45px 20px;
+            background-color: #f7d9c4;
+        }
+
+        .contacto h2 {
+            color: #6b3e2e;
+        }
+
+        .contacto p {
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           PIE DE PÁGINA
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #6b3e2e;
+            color: white;
+        }
+
+
+        /* =========================
+           CELULAR
+           2 PRODUCTOS POR FILA
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 25px 15px 20px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav {
+                gap: 7px;
+                padding: 10px;
+            }
+
+            nav a {
+                padding: 8px 12px;
+                font-size: 14px;
+            }
+
+            .inicio {
+                padding: 35px 15px 20px;
+            }
+
+            .inicio h2 {
+                font-size: 27px;
+            }
+
+            .inicio p {
+                font-size: 16px;
+            }
+
+            /* AQUÍ SE HACEN 2 PRODUCTOS POR FILA */
+
+            .contenedor-productos {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .productos {
+                padding: 15px;
+            }
+
+            .producto {
+                border-radius: 13px;
+            }
+
+            .producto img {
+                height: 170px;
+            }
+
+            .info-producto {
+                padding: 12px 8px;
+            }
+
+            .info-producto h3 {
+                font-size: 16px;
+            }
+
+            .info-producto p {
+                font-size: 13px;
+            }
+
+            .precio {
+                font-size: 17px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <header>
+        <h1>🍿 Punto Popcorn</h1>
+        <p>Creaciones hechas con amor y dedicación 🧶</p>
+    </header>
+
+
+    <!-- =========================
+         NAVEGACIÓN
+    ========================== -->
+
+    <nav>
+
+        <a href="#inicio">🏠 Inicio</a>
+
+        <a href="#productos">🧶 Productos</a>
+
+        <a href="#sobre-mi">💗 Sobre mí</a>
+
+        <a href="#comentarios">💬 Comentarios</a>
+
+        <a href="#contacto">📱 Contacto</a>
+
+    </nav>
+
+
+    <!-- =========================
+         INICIO
+    ========================== -->
+
+    <section id="inicio" class="inicio">
+
+        <h2>Bienvenidos a Punto Popcorn 🍿</h2>
+
+        <p>
+            Descubre productos hechos a mano con mucho cariño.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         PRODUCTOS
+    ========================== -->
+
+    <section id="productos" class="productos">
+
+        <h2>✨ Mis productos ✨</h2>
+
+
+        <div class="contenedor-productos">
+
+
+            <!-- PRODUCTO 1 -->
+
+            <div class="producto">
+
+                <img src="imagen1.jpg" alt="Producto 1">
+
+                <div class="info-producto">
+
+                    <h3>Amigurumi</h3>
+
+                    <p>Hecho a mano con lana acrílica.</p>
+
+                    <span class="precio">L. 400</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTO 2 -->
+
+            <div class="producto">
+
+                <img src="imagen2.jpg" alt="Producto 2">
+
+                <div class="info-producto">
+
+                    <h3>Llaveros</h3>
+
+                    <p>Pequeños detalles hechos a mano.</p>
+
+                    <span class="precio">L. 60</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTO 3 -->
+
+            <div class="producto">
+
+                <img src="imagen3.jpg" alt="Producto 3">
+
+                <div class="info-producto">
+
+                    <h3>Accesorios</h3>
+
+                    <p>Diseños únicos y personalizados.</p>
+
+                    <span class="precio">L. 100</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTO 4 -->
+
+            <div class="producto">
+
+                <img src="imagen4.jpg" alt="Producto 4">
+
+                <div class="info-producto">
+
+                    <h3>Creaciones especiales</h3>
+
+                    <p>Realizadas especialmente para ti.</p>
+
+                    <span class="precio">Consultar</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTO 5 -->
+
+            <div class="producto">
+
+                <img src="imagen5.jpg" alt="Producto 5">
+
+                <div class="info-producto">
+
+                    <h3>Amigurumi personalizado</h3>
+
+                    <p>Tu personaje favorito hecho en crochet.</p>
+
+                    <span class="precio">Consultar</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTO 6 -->
+
+            <div class="producto">
+
+                <img src="imagen6.jpg" alt="Producto 6">
+
+                <div class="info-producto">
+
+                    <h3>Llaveros personalizados</h3>
+
+                    <p>Un detalle pequeño y especial.</p>
+
+                    <span class="precio">L. 60</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTO 7 -->
+
+            <div class="producto">
+
+                <img src="imagen7.jpg" alt="Producto 7">
+
+                <div class="info-producto">
+
+                    <h3>Decoraciones</h3>
+
+                    <p>Detalles para decorar tus espacios.</p>
+
+                    <span class="precio">Consultar</span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCTO 8 -->
+
+            <div class="producto">
+
+                <img src="imagen8.jpg" alt="Producto 8">
+
+                <div class="info-producto">
+
+                    <h3>Pedidos especiales</h3>
+
+                    <p>Diseños personalizados bajo pedido.</p>
+
+                    <span class="precio">Consultar</span>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SOBRE MÍ
+    ========================== -->
+
+    <section id="sobre-mi" class="sobre-mi">
+
+        <h2>💗 Sobre mí</h2>
+
+        <p>
+            Soy la persona detrás de Punto Popcorn. Me encanta crear
+            productos hechos a mano utilizando crochet y diferentes
+            materiales para convertir pequeñas ideas en creaciones
+            especiales.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         COMENTARIOS
+    ========================== -->
+
+    <section id="comentarios" class="sobre-mi">
+
+        <h2>💬 Comentarios</h2>
+
+        <p>
+            Tu opinión es muy importante para mí.
+            Aquí podrás compartir tu experiencia con Punto Popcorn.
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         CONTACTO
+    ========================== -->
+
+    <section id="contacto" class="contacto">
+
+        <h2>📱 Contacto</h2>
+
+        <p>
+            ¿Te interesa algún producto?
+            ¡Contáctame para realizar tu pedido!
+        </p>
+
+    </section>
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 Punto Popcorn 🍿 | Hecho a mano con amor 🧶
+        </p>
+
+    </footer>
+
+
+</body>
+
+</html>
