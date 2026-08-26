@@ -23,12 +23,13 @@ body {
     justify-content: center;
     align-items: center;
     text-align: center;
-    color: black;
+    color: white;
 }
 
 .encabezado h1 {
     font-size: 42px;
     font-weight: 700;
+    color: white;
 }
 
 
@@ -51,7 +52,7 @@ body {
     left: 0;
     width: 100%;
     z-index: 1000;
-    background-color: #A64D9B;
+    background-color: #7D73B7;
 }
 
 .menu a {
@@ -118,7 +119,7 @@ body {
 }
 
 .tarjeta h3 {
-    color: #6c3483;
+    color: #7D73B7;
 }
 
 
@@ -130,7 +131,6 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #6c3483;
 }
 
 .imagen-producto {
@@ -210,16 +210,13 @@ body {
 /* PIE DE PÁGINA */
 
 .pie-pagina {
-    background-color: #A64D9B;
+    background-color: #7D73B7;
     color: white;
 
     text-align: center;
 
     padding: 35px;
 }
-
-
-/* RESPONSIVIDAD */
 
 /* RESPONSIVIDAD */
 
