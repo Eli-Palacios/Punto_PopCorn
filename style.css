@@ -237,24 +237,12 @@ body {
 /* MENÚ EN CELULAR */
 
 .barra-navegacion {
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-    width: 100%;
-    overflow: hidden;
+    display: flex;
+    justify-content: center;
 }
 
 .barra-navegacion a {
-    float: none !important;
-    display: block !important;
-    width: 100% !important;
-    box-sizing: border-box;
-
-    text-align: center;
-    font-size: 11px !important;
-    padding: 9px 2px !important;
-    margin: 0 !important;
-
-    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 /* COMENTARIOS */
