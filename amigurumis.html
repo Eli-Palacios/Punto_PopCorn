@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Punto Popcorn</title>
+    <title>Productos | Punto Popcorn</title>
 
     <style>
 
@@ -23,28 +23,6 @@
             font-family: Arial, sans-serif;
             background-color: #fff8f2;
             color: #4a2c20;
-        }
-
-
-        /* =========================
-           ENCABEZADO
-        ========================= */
-
-        header {
-            text-align: center;
-            padding: 35px 20px 25px;
-            background-color: #f7d9c4;
-        }
-
-        header h1 {
-            margin: 0;
-            font-size: 38px;
-            color: #6b3e2e;
-        }
-
-        header p {
-            margin: 8px 0 0;
-            font-size: 17px;
         }
 
 
@@ -119,8 +97,6 @@
             margin-bottom: 30px;
         }
 
-        /* 4 productos por fila en computadora */
-
         .contenedor-productos {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
@@ -178,55 +154,21 @@
 
 
         /* =========================
-           SOBRE MÍ
-        ========================= */
-
-        .sobre-mi {
-            max-width: 1000px;
-            margin: 60px auto;
-            padding: 35px 20px;
-            text-align: center;
-        }
-
-        .sobre-mi h2 {
-            color: #6b3e2e;
-            font-size: 30px;
-        }
-
-        .sobre-mi p {
-            font-size: 17px;
-            line-height: 1.7;
-        }
-
-
-        /* =========================
            CONTACTO
         ========================= */
 
         .contacto {
             text-align: center;
-            padding: 45px 20px;
-            background-color: #f7d9c4;
+            padding: 60px 20px;
         }
 
         .contacto h2 {
             color: #6b3e2e;
+            font-size: 30px;
         }
 
         .contacto p {
             font-size: 17px;
-        }
-
-
-        /* =========================
-           PIE DE PÁGINA
-        ========================= */
-
-        footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #6b3e2e;
-            color: white;
         }
 
 
@@ -236,14 +178,6 @@
         ========================= */
 
         @media (max-width: 700px) {
-
-            header {
-                padding: 25px 15px 20px;
-            }
-
-            header h1 {
-                font-size: 30px;
-            }
 
             nav {
                 gap: 7px;
@@ -267,15 +201,13 @@
                 font-size: 16px;
             }
 
-            /* AQUÍ SE HACEN 2 PRODUCTOS POR FILA */
+            .productos {
+                padding: 15px;
+            }
 
             .contenedor-productos {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
-            }
-
-            .productos {
-                padding: 15px;
             }
 
             .producto {
@@ -312,30 +244,18 @@
 
 
     <!-- =========================
-         ENCABEZADO
-    ========================== -->
-
-    <header>
-        <h1>🍿 Punto Popcorn</h1>
-        <p>Creaciones hechas con amor y dedicación 🧶</p>
-    </header>
-
-
-    <!-- =========================
          NAVEGACIÓN
     ========================== -->
 
     <nav>
 
-        <a href="#inicio">🏠 Inicio</a>
+        <a href="index.html">🏠 Inicio</a>
 
         <a href="#productos">🧶 Productos</a>
 
-        <a href="#sobre-mi">💗 Sobre mí</a>
-
-        <a href="#comentarios">💬 Comentarios</a>
-
         <a href="#contacto">📱 Contacto</a>
+
+        <a href="index.html">↩️ Volver</a>
 
     </nav>
 
@@ -344,12 +264,12 @@
          INICIO
     ========================== -->
 
-    <section id="inicio" class="inicio">
+    <section class="inicio">
 
-        <h2>Bienvenidos a Punto Popcorn 🍿</h2>
+        <h2>✨ Mis productos ✨</h2>
 
         <p>
-            Descubre productos hechos a mano con mucho cariño.
+            Descubre mis creaciones hechas a mano con mucho cariño.
         </p>
 
     </section>
@@ -361,8 +281,7 @@
 
     <section id="productos" class="productos">
 
-        <h2>✨ Mis productos ✨</h2>
-
+        <h2>🧶 Productos</h2>
 
         <div class="contenedor-productos">
 
@@ -371,7 +290,7 @@
 
             <div class="producto">
 
-                <img src="imagen1.jpg" alt="Producto 1">
+                <img src="Imagenes/imagen1.jpg" alt="Producto 1">
 
                 <div class="info-producto">
 
@@ -390,7 +309,7 @@
 
             <div class="producto">
 
-                <img src="imagen2.jpg" alt="Producto 2">
+                <img src="Imagenes/imagen2.jpg" alt="Producto 2">
 
                 <div class="info-producto">
 
@@ -409,7 +328,7 @@
 
             <div class="producto">
 
-                <img src="imagen3.jpg" alt="Producto 3">
+                <img src="Imagenes/imagen3.jpg" alt="Producto 3">
 
                 <div class="info-producto">
 
@@ -428,7 +347,7 @@
 
             <div class="producto">
 
-                <img src="imagen4.jpg" alt="Producto 4">
+                <img src="Imagenes/imagen4.jpg" alt="Producto 4">
 
                 <div class="info-producto">
 
@@ -447,7 +366,7 @@
 
             <div class="producto">
 
-                <img src="imagen5.jpg" alt="Producto 5">
+                <img src="Imagenes/imagen5.jpg" alt="Producto 5">
 
                 <div class="info-producto">
 
@@ -466,7 +385,7 @@
 
             <div class="producto">
 
-                <img src="imagen6.jpg" alt="Producto 6">
+                <img src="Imagenes/imagen6.jpg" alt="Producto 6">
 
                 <div class="info-producto">
 
@@ -485,7 +404,7 @@
 
             <div class="producto">
 
-                <img src="imagen7.jpg" alt="Producto 7">
+                <img src="Imagenes/imagen7.jpg" alt="Producto 7">
 
                 <div class="info-producto">
 
@@ -504,7 +423,7 @@
 
             <div class="producto">
 
-                <img src="imagen8.jpg" alt="Producto 8">
+                <img src="Imagenes/imagen8.jpg" alt="Producto 8">
 
                 <div class="info-producto">
 
@@ -525,40 +444,6 @@
 
 
     <!-- =========================
-         SOBRE MÍ
-    ========================== -->
-
-    <section id="sobre-mi" class="sobre-mi">
-
-        <h2>💗 Sobre mí</h2>
-
-        <p>
-            Soy la persona detrás de Punto Popcorn. Me encanta crear
-            productos hechos a mano utilizando crochet y diferentes
-            materiales para convertir pequeñas ideas en creaciones
-            especiales.
-        </p>
-
-    </section>
-
-
-    <!-- =========================
-         COMENTARIOS
-    ========================== -->
-
-    <section id="comentarios" class="sobre-mi">
-
-        <h2>💬 Comentarios</h2>
-
-        <p>
-            Tu opinión es muy importante para mí.
-            Aquí podrás compartir tu experiencia con Punto Popcorn.
-        </p>
-
-    </section>
-
-
-    <!-- =========================
          CONTACTO
     ========================== -->
 
@@ -572,19 +457,6 @@
         </p>
 
     </section>
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <footer>
-
-        <p>
-            © 2026 Punto Popcorn 🍿 | Hecho a mano con amor 🧶
-        </p>
-
-    </footer>
 
 
 </body>
