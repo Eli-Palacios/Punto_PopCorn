@@ -38,29 +38,46 @@ body {
 .barra-navegacion {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    flex-wrap: nowrap;
     gap: 10px;
-    padding: 15px;
-    background-color: white;
-    position: sticky;
+
+    position: fixed;
     top: 0;
+    left: 0;
+    width: 100%;
+
     z-index: 1000;
+
+    background-color: white;
+    padding: 10px 15px;
+
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+
+    overflow-x: auto;
 }
 
 .barra-navegacion a {
+    flex-shrink: 0;
+
     text-decoration: none;
+
     color: #6b3e2e;
     background-color: #f7d9c4;
+
     padding: 10px 18px;
+
     border-radius: 20px;
+
     font-weight: 600;
+
     transition: 0.3s;
 }
 
 .barra-navegacion a:hover {
     background-color: #e9b89f;
     color: #6b3e2e;
+
     transform: translateY(-2px);
 }
 
