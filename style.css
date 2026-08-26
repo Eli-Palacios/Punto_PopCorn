@@ -272,12 +272,20 @@ body {
 
 
     /* IMÁGENES */
-    .imagen-producto {
-    width: 100%;
-    height: 220px;
-    object-fit: cover;
+
+    .espacio-imagen p {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
     }
 
+    .imagen-producto {
+        display: block;
+        width: 100%;
+        height: 220px;
+        object-fit: cover;
+    }
 
     /* PIE DE PÁGINA */
     .pie-pagina {
