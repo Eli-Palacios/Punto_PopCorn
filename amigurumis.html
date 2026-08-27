@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Productos | Punto Popcorn</title>
+    <title>Punto Popcorn</title>
 
     <style>
 
@@ -27,36 +27,59 @@
 
 
         /* =========================
-           NAVEGACIÓN
+           ENCABEZADO
         ========================= */
 
-        nav {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 10px;
-            padding: 15px;
-            background-color: #fff;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        header {
+            text-align: center;
+            padding: 25px 2px 25px;
+            background-color: #655d94;
         }
 
-        nav a {
-            text-decoration: none;
-            color: #6b3e2e;
-            background-color: #f7d9c4;
-            padding: 10px 18px;
-            border-radius: 20px;
-            font-weight: bold;
-            transition: 0.3s;
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+            color: #443e64;
         }
 
-        nav a:hover {
-            background-color: #e9b89f;
-            transform: translateY(-2px);
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
         }
+
+
+        /* =========================
+   NAVEGACIÓN
+========================= */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    background-color: #7D73B7;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+nav a {
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #655CA0;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+nav a:hover {
+    background-color: #958CCB;
+    transform: translateY(-2px);
+}
 
 
         /* =========================
@@ -96,6 +119,8 @@
             color: #6b3e2e;
             margin-bottom: 30px;
         }
+
+        /* 4 productos por fila en computadora */
 
         .contenedor-productos {
             display: grid;
@@ -154,21 +179,55 @@
 
 
         /* =========================
+           SOBRE MÍ
+        ========================= */
+
+        .sobre-mi {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .sobre-mi h2 {
+            color: #6b3e2e;
+            font-size: 30px;
+        }
+
+        .sobre-mi p {
+            font-size: 17px;
+            line-height: 1.7;
+        }
+
+
+        /* =========================
            CONTACTO
         ========================= */
 
         .contacto {
             text-align: center;
-            padding: 60px 20px;
+            padding: 45px 20px;
+            background-color: #f7d9c4;
         }
 
         .contacto h2 {
             color: #6b3e2e;
-            font-size: 30px;
         }
 
         .contacto p {
             font-size: 17px;
+        }
+
+
+        /* =========================
+           PIE DE PÁGINA
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #6b3e2e;
+            color: white;
         }
 
 
@@ -179,14 +238,26 @@
 
         @media (max-width: 700px) {
 
+            header {
+                padding: 25px 15px 20px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
             nav {
-                gap: 7px;
-                padding: 10px;
+                gap: 5px;
+                padding: 8px 5px;
+                flex-wrap: nowrap;
             }
 
             nav a {
-                padding: 8px 12px;
-                font-size: 14px;
+                flex: 1;
+                padding: 9px 4px;
+                font-size: 12px;
+                text-align: center;
+                border-radius: 15px;
             }
 
             .inicio {
@@ -201,13 +272,15 @@
                 font-size: 16px;
             }
 
-            .productos {
-                padding: 15px;
-            }
+            /* AQUÍ SE HACEN 2 PRODUCTOS POR FILA */
 
             .contenedor-productos {
                 grid-template-columns: repeat(2, 1fr);
                 gap: 12px;
+            }
+
+            .productos {
+                padding: 15px;
             }
 
             .producto {
@@ -236,6 +309,71 @@
 
         }
 
+        /* =========================
+        CARRITO
+        ========================= */
+
+        .carrito {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 35px 20px;
+            text-align: center;
+            background-color: #F3F0FA;
+            border-radius: 20px;
+        }
+
+        .carrito h2 {
+            color: #655CA0;
+            font-size: 30px;
+            margin-bottom: 25px;
+        }
+
+        #lista-carrito {
+            background-color: white;
+            padding: 20px;
+            border-radius: 15px;
+            min-height: 80px;
+        }
+
+        .item-carrito {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px;
+            margin-bottom: 10px;
+            background-color: #E8E4F5;
+            border-radius: 12px;
+        }
+
+        .btn-carrito {
+            border: none;
+            background-color: #7D73B7;
+            color: white;
+            padding: 9px 14px;
+            margin-top: 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-carrito:hover {
+            background-color: #655CA0;
+        }
+
+        .btn-eliminar {
+            border: none;
+            background-color: #C97C91;
+            color: white;
+            padding: 6px 10px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        #total-carrito {
+            color: #655CA0;
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 
@@ -243,36 +381,49 @@
 <body>
 
 
-    <!-- =========================
+<!-- =========================
          NAVEGACIÓN
     ========================== -->
 
     <nav>
 
-        <a href="index.html">🏠 Inicio</a>
+        <a href="#inicio">Inicio</a>
 
-        <a href="#productos">🧶 Productos</a>
+        <a href="#productos">Productos</a>
 
-        <a href="#contacto">📱 Contacto</a>
+        <a href="#carrito">Carrito</a>
 
-        <a href="index.html">↩️ Volver</a>
+        <a href="#contacto">Contacto</a>
 
     </nav>
+
+    <!-- =========================
+         ENCABEZADO
+    ========================== -->
+
+    <section id="inicio" class="inicio"></section>
+
+        <!-- --> <header> 
+
+            <h1>Amigurumis 🧶</h1>
+            
+        <!-- --> </header> 
+    </section>
 
 
     <!-- =========================
          INICIO
-    ========================== -->
+    ========================== 
 
-    <section class="inicio">
+    <section id="inicio" class="inicio">
 
-        <h2>✨ Mis productos ✨</h2>
+        <h2>Bienvenidos a Punto Popcorn 🍿</h2>
 
         <p>
-            Descubre mis creaciones hechas a mano con mucho cariño.
+            Descubre productos hechos a mano con mucho cariño.
         </p>
 
-    </section>
+    </section>-->
 
 
     <!-- =========================
@@ -281,7 +432,8 @@
 
     <section id="productos" class="productos">
 
-        <h2>🧶 Productos</h2>
+        <!-- <h2>✨ Mis productos ✨</h2> -->
+
 
         <div class="contenedor-productos">
 
@@ -290,34 +442,43 @@
 
             <div class="producto">
 
-                <img src="Imagenes/imagen1.jpg" alt="Producto 1">
+                <img src="Imagenes/" alt="Personalizado">
 
                 <div class="info-producto">
 
-                    <h3>Amigurumi</h3>
+                    <h3>Personalizado</h3>
 
-                    <p>Hecho a mano con lana acrílica.</p>
+                    <p>Contactame y encarga tu amigurumi personalizado</p>
 
-                    <span class="precio">L. 400</span>
+                    <!-- <span class="precio">L. 750</span> -->
+
+                    <button class="btn-carrito" onclick="agregarAlCarrito('Pompompurin y Macaroon', 750)">
+                        🛒 Agregar
+                    </button>
 
                 </div>
 
             </div>
+            
 
 
             <!-- PRODUCTO 2 -->
 
             <div class="producto">
 
-                <img src="Imagenes/imagen2.jpg" alt="Producto 2">
+                <img src="Imagenes/pompom.jpeg" alt="Pompompurin y Macaroon">
 
                 <div class="info-producto">
 
-                    <h3>Llaveros</h3>
+                    <h3>Pompompurin y Macaroon</h3>
 
-                    <p>Pequeños detalles hechos a mano.</p>
+                    <p></p>
 
-                    <span class="precio">L. 60</span>
+                    <span class="precio">L. 750</span>
+                    
+                    <button class="btn-carrito" onclick="agregarAlCarrito('Pompompurin y Macaroon', 750)">
+                        🛒 Agregar
+                    </button>
 
                 </div>
 
@@ -328,16 +489,20 @@
 
             <div class="producto">
 
-                <img src="Imagenes/imagen3.jpg" alt="Producto 3">
+                <img src="Imagenes/vaquita.png" alt="Vaquita">
 
                 <div class="info-producto">
 
-                    <h3>Accesorios</h3>
+                    <h3>Vaquita</h3>
 
-                    <p>Diseños únicos y personalizados.</p>
+                    <p></p>
 
-                    <span class="precio">L. 100</span>
+                    <span class="precio">L. 450</span>
 
+                    <button class="btn-carrito" onclick="agregarAlCarrito('Vaquita', 450)">
+                        🛒 Agregar
+                    </button>
+                    
                 </div>
 
             </div>
@@ -347,35 +512,43 @@
 
             <div class="producto">
 
-                <img src="Imagenes/imagen4.jpg" alt="Producto 4">
+                <img src="Imagenes/stich.jpeg" alt="Stich">
 
                 <div class="info-producto">
 
-                    <h3>Creaciones especiales</h3>
+                <h3>Stich</h3>
 
-                    <p>Realizadas especialmente para ti.</p>
+                <p></p>
 
-                    <span class="precio">Consultar</span>
+                <span class="precio">L. 400</span>
 
-                </div>
-
+                    <button class="btn-carrito" onclick="agregarAlCarrito('Stich', 400)">
+                        🛒 Agregar
+                    </button>
+                    
             </div>
+
+</div>
 
 
             <!-- PRODUCTO 5 -->
 
             <div class="producto">
 
-                <img src="Imagenes/imagen5.jpg" alt="Producto 5">
+                <img src="Imagenes/Cr7.jpeg" alt="Cr7">
 
                 <div class="info-producto">
 
-                    <h3>Amigurumi personalizado</h3>
+                    <h3>Cr7</h3>
 
-                    <p>Tu personaje favorito hecho en crochet.</p>
+                    <p></p>
 
-                    <span class="precio">Consultar</span>
+                    <span class="precio">L. 450</span>
 
+                    <button class="btn-carrito" onclick="agregarAlCarrito('Cr7', 450)">
+                        🛒 Agregar
+                    </button>
+                    
                 </div>
 
             </div>
@@ -385,7 +558,7 @@
 
             <div class="producto">
 
-                <img src="Imagenes/imagen6.jpg" alt="Producto 6">
+                <img src="imagen6.jpg" alt="Producto 6">
 
                 <div class="info-producto">
 
@@ -404,7 +577,7 @@
 
             <div class="producto">
 
-                <img src="Imagenes/imagen7.jpg" alt="Producto 7">
+                <img src="imagen7.jpg" alt="Producto 7">
 
                 <div class="info-producto">
 
@@ -423,7 +596,7 @@
 
             <div class="producto">
 
-                <img src="Imagenes/imagen8.jpg" alt="Producto 8">
+                <img src="imagen8.jpg" alt="Producto 8">
 
                 <div class="info-producto">
 
@@ -442,22 +615,140 @@
 
     </section>
 
+<section id="carrito" class="carrito">
+
+    <h2>🛒 Mi carrito</h2>
+
+    <div id="lista-carrito">
+        <p>Tu carrito está vacío.</p>
+    </div>
+
+    <h3 id="total-carrito">Total: L. 0</h3>
+
+</section>
 
     <!-- =========================
-         CONTACTO
-    ========================== -->
+         SOBRE MÍ
+    ========================== 
 
-    <section id="contacto" class="contacto">
+    <section id="sobre-mi" class="sobre-mi">
 
-        <h2>📱 Contacto</h2>
+        <h2>💗 Sobre mí</h2>
 
         <p>
-            ¿Te interesa algún producto?
-            ¡Contáctame para realizar tu pedido!
+            Soy la persona detrás de Punto Popcorn. Me encanta crear
+            productos hechos a mano utilizando crochet y diferentes
+            materiales para convertir pequeñas ideas en creaciones
+            especiales.
         </p>
 
-    </section>
+    </section>-->
 
+
+    <!-- =========================
+         COMENTARIOS
+    ========================== 
+
+    <section id="comentarios" class="sobre-mi">
+
+        <h2>💬 Comentarios</h2>
+
+        <p>
+            Tu opinión es muy importante para mí.
+            Aquí podrás compartir tu experiencia con Punto Popcorn.
+        </p>
+
+    </section>-->
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <!-- <footer> -->
+
+        <section id="contacto" class="contacto">
+            
+             <h2>📱 Contacto</h2>
+
+            <p>
+                ¿Te interesa algún producto?
+                ¡Contáctame para realizar tu pedido!
+            </p>
+
+        </section>
+
+    <!-- </footer> -->
+
+    <script>
+
+let carrito = [];
+
+function agregarAlCarrito(nombre, precio) {
+
+    carrito.push({
+        nombre: nombre,
+        precio: precio
+    });
+
+    actualizarCarrito();
+
+}
+
+function eliminarDelCarrito(indice) {
+
+    carrito.splice(indice, 1);
+
+    actualizarCarrito();
+
+}
+
+function actualizarCarrito() {
+
+    const lista = document.getElementById("lista-carrito");
+    const totalTexto = document.getElementById("total-carrito");
+
+    lista.innerHTML = "";
+
+    if (carrito.length === 0) {
+
+        lista.innerHTML = "<p>Tu carrito está vacío.</p>";
+        totalTexto.textContent = "Total: L. 0";
+
+        return;
+    }
+
+    let total = 0;
+
+    carrito.forEach((producto, indice) => {
+
+        total += producto.precio;
+
+        const item = document.createElement("div");
+
+        item.className = "item-carrito";
+
+        item.innerHTML = `
+            <span>
+                ${producto.nombre} - L. ${producto.precio}
+            </span>
+
+            <button
+                class="btn-eliminar"
+                onclick="eliminarDelCarrito(${indice})">
+                🗑️
+            </button>
+        `;
+
+        lista.appendChild(item);
+
+    });
+
+    totalTexto.textContent = `Total: L. ${total}`;
+
+}
+
+</script>
 
 </body>
 
