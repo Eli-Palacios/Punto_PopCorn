@@ -3,16 +3,9 @@
 body {
     font-family: 'Poppins', sans-serif;
     margin: 0;
+    background-color: #bbb2ec;
 }
 
-
-/* ENCABEZADO 
-
-.encabezado {
-    background-color: #c49ef5;
-    color: white;
-    padding: 35px;
-}*/
 
 .encabezado {
     background-image: url("Imagenes/header3.png");
@@ -52,7 +45,7 @@ body {
 
     padding: 10px 15px;
 
-    background-color: white;
+    background-color: #bbb2ec;
 
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 
@@ -90,8 +83,8 @@ body {
 /* AL PASAR EL MOUSE */
 
 .barra-navegacion a:hover {
-    background-color: #e9b89f;
-    color: #6b3e2e;
+    background-color: #9a8fd1;
+    color: #625a91;
 
     transform: translateY(-2px);
 }
