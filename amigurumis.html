@@ -3,9 +3,12 @@
 
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Punto Popcorn</title>
+    <title>Amigurumis</title>
+
+    <link rel="icon" type="image/png" href="Imagenes/logo.png">
 
     <style>
 
@@ -49,37 +52,37 @@
 
 
         /* =========================
-   NAVEGACIÓN
-========================= */
+           NAVEGACIÓN
+        ========================= */
 
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    padding: 12px 15px;
-    background-color: #7D73B7;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
-}
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            background-color: #7D73B7;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
 
-nav a {
-    text-decoration: none;
-    color: #ffffff;
-    background-color: #655CA0;
-    padding: 10px 18px;
-    border-radius: 20px;
-    font-weight: bold;
-    transition: 0.3s;
-    white-space: nowrap;
-}
+        nav a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #655CA0;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
 
-nav a:hover {
-    background-color: #958CCB;
-    transform: translateY(-2px);
-}
+        nav a:hover {
+            background-color: #958CCB;
+            transform: translateY(-2px);
+        }
 
 
         /* =========================
@@ -88,7 +91,7 @@ nav a:hover {
 
         .inicio {
             text-align: center;
-            padding: 55px 20px 35px;
+            padding: 0px 20px 0px;
         }
 
         .inicio h2 {
@@ -111,12 +114,13 @@ nav a:hover {
             max-width: 1200px;
             margin: auto;
             padding: 20px;
+            color: #7D73B7;
         }
 
         .productos h2 {
             text-align: center;
             font-size: 30px;
-            color: #6b3e2e;
+            color: #7D73B7;
             margin-bottom: 30px;
         }
 
@@ -220,6 +224,74 @@ nav a:hover {
 
 
         /* =========================
+           BOTÓN CONTACTAR
+        ========================= */
+
+        .btn-contacto {
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            background-color: #7D73B7;
+            color: white;
+            padding: 9px 14px;
+            margin-top: 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-contacto:hover {
+            background-color: #655CA0;
+        }
+
+
+        /* =========================
+           MENÚ DE REDES SOCIALES
+        ========================= */
+
+        .menu-redes {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+            z-index: 2000;
+            text-align: center;
+        }
+
+        .menu-redes h2 {
+            color: #655CA0;
+            margin-top: 0;
+        }
+
+        .iconos-redes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .iconos-redes a {
+            font-size: 35px;
+            text-decoration: none;
+        }
+
+        .cerrar-redes {
+            margin-top: 20px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 15px;
+            background-color: #7D73B7;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        /* =========================
            PIE DE PÁGINA
         ========================= */
 
@@ -309,71 +381,6 @@ nav a:hover {
 
         }
 
-        /* =========================
-        CARRITO
-        ========================= */
-
-        .carrito {
-            max-width: 900px;
-            margin: 60px auto;
-            padding: 35px 20px;
-            text-align: center;
-            background-color: #F3F0FA;
-            border-radius: 20px;
-        }
-
-        .carrito h2 {
-            color: #655CA0;
-            font-size: 30px;
-            margin-bottom: 25px;
-        }
-
-        #lista-carrito {
-            background-color: white;
-            padding: 20px;
-            border-radius: 15px;
-            min-height: 80px;
-        }
-
-        .item-carrito {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 12px;
-            margin-bottom: 10px;
-            background-color: #E8E4F5;
-            border-radius: 12px;
-        }
-
-        .btn-carrito {
-            border: none;
-            background-color: #7D73B7;
-            color: white;
-            padding: 9px 14px;
-            margin-top: 12px;
-            border-radius: 15px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-
-        .btn-carrito:hover {
-            background-color: #655CA0;
-        }
-
-        .btn-eliminar {
-            border: none;
-            background-color: #C97C91;
-            color: white;
-            padding: 6px 10px;
-            border-radius: 10px;
-            cursor: pointer;
-        }
-
-        #total-carrito {
-            color: #655CA0;
-            margin-top: 20px;
-        }
-
     </style>
 </head>
 
@@ -382,139 +389,139 @@ nav a:hover {
 
 
 <!-- =========================
-         NAVEGACIÓN
-    ========================== -->
+     NAVEGACIÓN
+========================== -->
 
-    <nav>
+<nav>
 
-        <a href="#inicio">Inicio</a>
+    <a href="#inicio">Inicio</a>
 
-        <a href="#productos">Productos</a>
+    <a href="#productos">Productos</a>
 
-        <a href="#carrito">Carrito</a>
+    <a href="#" onclick="abrirRedes()">Contacto</a>
 
-        <a href="#contacto">Contacto</a>
-
-    </nav>
-
-    <!-- =========================
-         ENCABEZADO
-    ========================== -->
-
-    <section id="inicio" class="inicio"></section>
-
-        <!-- --> <header> 
-
-            <h1>Amigurumis 🧶</h1>
-            
-        <!-- --> </header> 
-    </section>
+</nav>
 
 
-    <!-- =========================
-         INICIO
-    ========================== 
+<!-- =========================
+     ENCABEZADO
+========================== -->
 
-    <section id="inicio" class="inicio">
+<section id="inicio" class="inicio"></section>
 
-        <h2>Bienvenidos a Punto Popcorn 🍿</h2>
+    <!-- --> <header>
 
-        <p>
-            Descubre productos hechos a mano con mucho cariño.
-        </p>
+        <h1>Amigurumis🧸✨</h1>
 
-    </section>-->
+    <!-- --> </header>
 
-
-    <!-- =========================
-         PRODUCTOS
-    ========================== -->
-
-    <section id="productos" class="productos">
-
-        <!-- <h2>✨ Mis productos ✨</h2> -->
+</section>
 
 
-        <div class="contenedor-productos">
+<!-- =========================
+     INICIO
+==========================
+
+<section id="inicio" class="inicio">
+
+    <h2>Bienvenidos a Punto Popcorn 🍿</h2>
+
+    <p>
+        Descubre productos hechos a mano con mucho cariño.
+    </p>
+
+</section>-->
 
 
-            <!-- PRODUCTO 1 -->
+<!-- =========================
+     PRODUCTOS
+========================== -->
 
-            <div class="producto">
+<section id="productos" class="productos">
 
-                <img src="Imagenes/" alt="Personalizado">
-
-                <div class="info-producto">
-
-                    <h3>Personalizado</h3>
-
-                    <p>Contactame y encarga tu amigurumi personalizado</p>
-
-                    <!-- <span class="precio">L. 750</span> -->
-
-                    <button class="btn-carrito" onclick="agregarAlCarrito('Pompompurin y Macaroon', 750)">
-                        🛒 Agregar
-                    </button>
-
-                </div>
-
-            </div>
-            
+    <!-- <h2>✨ Mis productos ✨</h2> -->
 
 
-            <!-- PRODUCTO 2 -->
+    <div class="contenedor-productos">
 
-            <div class="producto">
 
-                <img src="Imagenes/pompom.jpeg" alt="Pompompurin y Macaroon">
+        <!-- PRODUCTO 1 -->
 
-                <div class="info-producto">
+        <div class="producto">
 
-                    <h3>Pompompurin y Macaroon</h3>
+            <img src="Imagenes/" alt="Personalizado">
 
-                    <p></p>
+            <div class="info-producto">
 
-                    <span class="precio">L. 750</span>
-                    
-                    <button class="btn-carrito" onclick="agregarAlCarrito('Pompompurin y Macaroon', 750)">
-                        🛒 Agregar
-                    </button>
+                <h3>Personalizado</h3>
 
-                </div>
+                <p>Contactame y encarga tu amigurumi personalizado</p>
+
+                <!-- <span class="precio">L. 750</span> -->
+
+                <a href="#contacto" class="btn-contacto">
+                    📱 Contactar
+                </a>
 
             </div>
 
+        </div>
 
-            <!-- PRODUCTO 3 -->
 
-            <div class="producto">
 
-                <img src="Imagenes/vaquita.png" alt="Vaquita">
+        <!-- PRODUCTO 2 -->
 
-                <div class="info-producto">
+        <div class="producto">
 
-                    <h3>Vaquita</h3>
+            <img src="Imagenes/pompom.jpeg" alt="Pompompurin y Macaroon">
 
-                    <p></p>
+            <div class="info-producto">
 
-                    <span class="precio">L. 450</span>
+                <h3>Pompompurin y Macaroon</h3>
 
-                    <button class="btn-carrito" onclick="agregarAlCarrito('Vaquita', 450)">
-                        🛒 Agregar
-                    </button>
-                    
-                </div>
+                <p></p>
+
+                <span class="precio">L. 750</span>
+
+                <a href="#contacto" class="btn-contacto">
+                    📱 Contactar
+                </a>
 
             </div>
 
+        </div>
 
-            <!-- PRODUCTO 4 -->
 
-            <div class="producto">
+        <!-- PRODUCTO 3 -->
 
-                <img src="Imagenes/stich.jpeg" alt="Stich">
+        <div class="producto">
 
-                <div class="info-producto">
+            <img src="Imagenes/vaquita.png" alt="Vaquita">
+
+            <div class="info-producto">
+
+                <h3>Vaquita</h3>
+
+                <p></p>
+
+                <span class="precio">L. 450</span>
+
+                <a href="#contacto" class="btn-contacto">
+                    📱 Contactar
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTO 4 -->
+
+        <div class="producto">
+
+            <img src="Imagenes/stich.jpeg" alt="Stich">
+
+            <div class="info-producto">
 
                 <h3>Stich</h3>
 
@@ -522,233 +529,203 @@ nav a:hover {
 
                 <span class="precio">L. 400</span>
 
-                    <button class="btn-carrito" onclick="agregarAlCarrito('Stich', 400)">
-                        🛒 Agregar
-                    </button>
-                    
+                <a href="#contacto" class="btn-contacto">
+                    📱 Contactar
+                </a>
+
             </div>
+
+        </div>
+
+
+        <!-- PRODUCTO 5 -->
+
+        <div class="producto">
+
+            <img src="Imagenes/Cr7.jpeg" alt="Cr7">
+
+            <div class="info-producto">
+
+                <h3>Cr7</h3>
+
+                <p></p>
+
+                <span class="precio">L. 450</span>
+
+                <a href="#contacto" class="btn-contacto">
+                    📱 Contactar
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTO 6 -->
+
+        <div class="producto">
+
+            <img src="Imagenes/sonic.jpeg" alt="Producto 6">
+
+            <div class="info-producto">
+
+                <h3>Sonic</h3>
+
+                <!-- <p>Un detalle pequeño y especial.</p> -->
+
+                <span class="precio">L. 350</span>
+
+                <a href="#contacto" class="btn-contacto">
+                    📱 Contactar
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTO 7 -->
+
+        <div class="producto">
+
+            <img src="imagen7.jpg" alt="Producto 7">
+
+            <div class="info-producto">
+
+                <h3>Decoraciones</h3>
+
+                <p>Detalles para decorar tus espacios.</p>
+
+                <span class="precio">Consultar</span>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTO 8 -->
+
+        <div class="producto">
+
+            <img src="imagen8.jpg" alt="Producto 8">
+
+            <div class="info-producto">
+
+                <h3>Pedidos especiales</h3>
+
+                <p>Diseños personalizados bajo pedido.</p>
+
+                <span class="precio">Consultar</span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOBRE MÍ
+==========================
+
+<section id="sobre-mi" class="sobre-mi">
+
+    <h2>💗 Sobre mí</h2>
+
+    <p>
+        Soy la persona detrás de Punto Popcorn. Me encanta crear
+        productos hechos a mano utilizando crochet y diferentes
+        materiales para convertir pequeñas ideas en creaciones
+        especiales.
+    </p>
+
+</section>-->
+
+
+<!-- =========================
+     COMENTARIOS
+==========================
+
+<section id="comentarios" class="sobre-mi">
+
+    <h2>💬 Comentarios</h2>
+
+    <p>
+        Tu opinión es muy importante para mí.
+        Aquí podrás compartir tu experiencia con Punto Popcorn.
+    </p>
+
+</section>-->
+
+
+<!-- =========================
+     CONTACTO
+========================== -->
+
+<!-- <footer> -->
+
+<section id="contacto" class="contacto">
+
+    <h2>📱 Contacto</h2>
+
+    <p>
+        ¿Te interesa algún producto?
+        ¡Contáctame para realizar tu pedido!
+    </p>
+
+</section>
+
+<!-- </footer> -->
+
+
+<!-- =========================
+     MENÚ DE REDES
+========================== -->
+
+<div id="menuRedes" class="menu-redes">
+
+    <h2>📱 Contáctame</h2>
+
+    <p>¡Sígueme en mis redes sociales!</p>
+
+    <div class="iconos-redes">
+
+        <a href="TU_LINK_DE_INSTAGRAM" target="_blank">
+            📷
+        </a>
+
+        <a href="TU_LINK_DE_TIKTOK" target="_blank">
+            🎵
+        </a>
+
+        <a href="TU_LINK_DE_WHATSAPP" target="_blank">
+            💬
+        </a>
+
+    </div>
+
+    <button class="cerrar-redes" onclick="cerrarRedes()">
+        Cerrar
+    </button>
 
 </div>
 
 
-            <!-- PRODUCTO 5 -->
+<script>
 
-            <div class="producto">
-
-                <img src="Imagenes/Cr7.jpeg" alt="Cr7">
-
-                <div class="info-producto">
-
-                    <h3>Cr7</h3>
-
-                    <p></p>
-
-                    <span class="precio">L. 450</span>
-
-                    <button class="btn-carrito" onclick="agregarAlCarrito('Cr7', 450)">
-                        🛒 Agregar
-                    </button>
-                    
-                </div>
-
-            </div>
-
-
-            <!-- PRODUCTO 6 -->
-
-            <div class="producto">
-
-                <img src="imagen6.jpg" alt="Producto 6">
-
-                <div class="info-producto">
-
-                    <h3>Llaveros personalizados</h3>
-
-                    <p>Un detalle pequeño y especial.</p>
-
-                    <span class="precio">L. 60</span>
-
-                </div>
-
-            </div>
-
-
-            <!-- PRODUCTO 7 -->
-
-            <div class="producto">
-
-                <img src="imagen7.jpg" alt="Producto 7">
-
-                <div class="info-producto">
-
-                    <h3>Decoraciones</h3>
-
-                    <p>Detalles para decorar tus espacios.</p>
-
-                    <span class="precio">Consultar</span>
-
-                </div>
-
-            </div>
-
-
-            <!-- PRODUCTO 8 -->
-
-            <div class="producto">
-
-                <img src="imagen8.jpg" alt="Producto 8">
-
-                <div class="info-producto">
-
-                    <h3>Pedidos especiales</h3>
-
-                    <p>Diseños personalizados bajo pedido.</p>
-
-                    <span class="precio">Consultar</span>
-
-                </div>
-
-            </div>
-
-
-        </div>
-
-    </section>
-
-<section id="carrito" class="carrito">
-
-    <h2>🛒 Mi carrito</h2>
-
-    <div id="lista-carrito">
-        <p>Tu carrito está vacío.</p>
-    </div>
-
-    <h3 id="total-carrito">Total: L. 0</h3>
-
-</section>
-
-    <!-- =========================
-         SOBRE MÍ
-    ========================== 
-
-    <section id="sobre-mi" class="sobre-mi">
-
-        <h2>💗 Sobre mí</h2>
-
-        <p>
-            Soy la persona detrás de Punto Popcorn. Me encanta crear
-            productos hechos a mano utilizando crochet y diferentes
-            materiales para convertir pequeñas ideas en creaciones
-            especiales.
-        </p>
-
-    </section>-->
-
-
-    <!-- =========================
-         COMENTARIOS
-    ========================== 
-
-    <section id="comentarios" class="sobre-mi">
-
-        <h2>💬 Comentarios</h2>
-
-        <p>
-            Tu opinión es muy importante para mí.
-            Aquí podrás compartir tu experiencia con Punto Popcorn.
-        </p>
-
-    </section>-->
-
-
-    <!-- =========================
-         FOOTER
-    ========================== -->
-
-    <!-- <footer> -->
-
-        <section id="contacto" class="contacto">
-            
-             <h2>📱 Contacto</h2>
-
-            <p>
-                ¿Te interesa algún producto?
-                ¡Contáctame para realizar tu pedido!
-            </p>
-
-        </section>
-
-    <!-- </footer> -->
-
-    <script>
-
-let carrito = [];
-
-function agregarAlCarrito(nombre, precio) {
-
-    carrito.push({
-        nombre: nombre,
-        precio: precio
-    });
-
-    actualizarCarrito();
-
-}
-
-function eliminarDelCarrito(indice) {
-
-    carrito.splice(indice, 1);
-
-    actualizarCarrito();
-
-}
-
-function actualizarCarrito() {
-
-    const lista = document.getElementById("lista-carrito");
-    const totalTexto = document.getElementById("total-carrito");
-
-    lista.innerHTML = "";
-
-    if (carrito.length === 0) {
-
-        lista.innerHTML = "<p>Tu carrito está vacío.</p>";
-        totalTexto.textContent = "Total: L. 0";
-
-        return;
+    function abrirRedes() {
+        document.getElementById("menuRedes").style.display = "block";
     }
 
-    let total = 0;
-
-    carrito.forEach((producto, indice) => {
-
-        total += producto.precio;
-
-        const item = document.createElement("div");
-
-        item.className = "item-carrito";
-
-        item.innerHTML = `
-            <span>
-                ${producto.nombre} - L. ${producto.precio}
-            </span>
-
-            <button
-                class="btn-eliminar"
-                onclick="eliminarDelCarrito(${indice})">
-                🗑️
-            </button>
-        `;
-
-        lista.appendChild(item);
-
-    });
-
-    totalTexto.textContent = `Total: L. ${total}`;
-
-}
+    function cerrarRedes() {
+        document.getElementById("menuRedes").style.display = "none";
+    }
 
 </script>
+
 
 </body>
 
