@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome para los iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Llaveros</title>
+
+    <link rel="icon" type="image/png" href="Imagenes/logo.png">
+
+    <style>
+
+        /* =========================
+           ESTILOS GENERALES
+        ========================= */
+
+        * {
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #fff8f2;
+            color: #443e64;
+        }
+
+
+        /* =========================
+           ENCABEZADO
+        ========================= */
+
+        header {
+            text-align: center;
+            padding: 25px 2px 25px;
+            background-color: #655d94;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 38px;
+            color: #443e64;
+        }
+
+        header p {
+            margin: 8px 0 0;
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           NAVEGACIÓN
+        ========================= */
+
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 15px;
+            background-color: #7D73B7;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #bbb2ec;
+            background-color: #655CA0;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            transition: 0.3s;
+            white-space: nowrap;
+        }
+
+        nav a:hover {
+            background-color: #958CCB;
+            transform: translateY(-2px);
+        }
+
+
+        /* =========================
+           SECCIÓN PRINCIPAL
+        ========================= */
+
+        .inicio {
+            text-align: center;
+            padding: 0px 20px 0px;
+        }
+
+        .inicio h2 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: #3d3857;
+        }
+
+        .inicio p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+
+
+        /* =========================
+           PRODUCTOS
+        ========================= */
+
+        .productos {
+            max-width: 1200px;
+            margin: auto;
+            padding: 20px;
+            color: #443e64;
+        }
+
+        .productos h2 {
+            text-align: center;
+            font-size: 30px;
+            color: #7D73B7;
+            margin-bottom: 30px;
+        }
+
+        /* 4 productos por fila en computadora */
+
+        .contenedor-productos {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 25px;
+        }
+
+
+        /* =========================
+           TARJETAS
+        ========================= */
+
+        .producto {
+            background-color: white;
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+            transition: 0.3s;
+            text-align: center;
+        }
+
+        .producto:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 7px 18px rgba(0, 0, 0, 0.18);
+        }
+
+        .producto img {
+            width: 100%;
+            height: 230px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .info-producto {
+            padding: 18px;
+        }
+
+        .info-producto h3 {
+            margin: 0 0 8px;
+            font-size: 20px;
+            color: #5b5380;
+        }
+
+        .info-producto p {
+            margin: 5px 0;
+            font-size: 14px;
+        }
+
+        .precio {
+            display: block;
+            margin-top: 12px;
+            font-size: 20px;
+            font-weight: bold;
+            color: #3d3857;
+        }
+
+
+        /* =========================
+           SOBRE MÍ
+        ========================= */
+
+        /* .sobre-mi {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 35px 20px;
+            text-align: center;
+        }
+
+        .sobre-mi h2 {
+            color: #ff4400;
+            font-size: 30px;
+        }
+
+        .sobre-mi p {
+            font-size: 17px;
+            line-height: 1.7;
+        } */
+
+
+        /* =========================
+           CONTACTO
+        ========================= */
+
+        .contacto {
+            text-align: center;
+            padding: 45px 20px;
+            background-color: #7D73B7;
+        }
+
+        .contacto h2 {
+            color: #ffffff;
+        }
+
+        .contacto p {
+            font-size: 17px;
+        }
+
+
+        /* =========================
+           BOTÓN CONTACTAR
+        ========================= */
+
+        .btn-contacto {
+            display: inline-block;
+            text-decoration: none;
+            border: none;
+            background-color: #7D73B7;
+            color: white;
+            padding: 9px 14px;
+            margin-top: 12px;
+            border-radius: 15px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-contacto:hover {
+            background-color: #655CA0;
+        }
+
+
+        /* =========================
+           MENÚ DE REDES SOCIALES
+        ========================= */
+
+        .menu-redes {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+            z-index: 2000;
+            text-align: center;
+        }
+
+        .menu-redes h2 {
+            color: #655CA0;
+            margin-top: 0;
+        }
+
+        .iconos-redes {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .iconos-redes a {
+            font-size: 35px;
+            text-decoration: none;
+            color: #655CA0;
+        }
+
+        .cerrar-redes {
+            margin-top: 20px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 15px;
+            background-color: #7D73B7;
+            color: white;
+            cursor: pointer;
+        }
+
+
+        /* =========================
+           PIE DE PÁGINA
+        ========================= */
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #443e64;
+            color: white;
+        }
+
+
+        /* =========================
+           CELULAR
+           2 PRODUCTOS POR FILA
+        ========================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 25px 15px 20px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            nav {
+                gap: 5px;
+                padding: 8px 5px;
+                flex-wrap: nowrap;
+            }
+
+            nav a {
+                flex: 1;
+                padding: 9px 4px;
+                font-size: 12px;
+                text-align: center;
+                border-radius: 15px;
+            }
+
+            .inicio {
+                padding: 35px 15px 20px;
+            }
+
+            .inicio h2 {
+                font-size: 27px;
+            }
+
+            .inicio p {
+                font-size: 16px;
+            }
+
+            /* AQUÍ SE HACEN 2 PRODUCTOS POR FILA */
+
+            .contenedor-productos {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 12px;
+            }
+
+            .productos {
+                padding: 15px;
+            }
+
+            .producto {
+                border-radius: 13px;
+            }
+
+            .producto img {
+                height: 170px;
+            }
+
+            .info-producto {
+                padding: 12px 8px;
+            }
+
+            .info-producto h3 {
+                font-size: 16px;
+            }
+
+            .info-producto p {
+                font-size: 13px;
+            }
+
+            .precio {
+                font-size: 17px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     NAVEGACIÓN
+========================== -->
+
+<nav>
+
+    <a href="#inicio">Inicio</a>
+
+    <a href="#productos">Productos</a>
+
+    <a href="#contacto">Contacto</a>
+
+    <a href="index.html">Volver</a>
+
+</nav>
+
+
+<!-- =========================
+     ENCABEZADO
+========================== -->
+
+<section id="inicio" class="inicio"></section>
+
+    <!-- --> <header>
+
+        <h1>Llaveros ⭐💜</h1>
+
+    <!-- --> </header>
+
+</section>
+
+
+<!-- =========================
+     INICIO
+==========================
+
+<section id="inicio" class="inicio">
+
+    <h2>Bienvenidos a Punto Popcorn 🍿</h2>
+
+    <p>
+        Descubre productos hechos a mano con mucho cariño.
+    </p>
+
+</section>-->
+
+
+<!-- =========================
+     PRODUCTOS
+========================== -->
+
+<section id="productos" class="productos">
+
+    <!-- <h2>✨ Mis productos ✨</h2> -->
+
+
+    <div class="contenedor-productos">
+
+        <!-- PRODUCTO 1 -->
+
+        <div class="producto">
+
+            <img src="Imagenes/gatito.jpg" alt="Personalizado">
+
+            <div class="info-producto">
+
+                <h3>Personalizado</h3>
+
+                <p>Contactame y encarga tu amigurumi personalizado</p>
+
+                <!-- <span class="precio">L. 750</span> -->
+
+                <button class="btn-contacto" onclick="abrirRedes()">
+                    Contactar
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- PRODUCTO 2 -->
+
+        <div class="producto">
+
+            <img src="Imagenes/llavero_cereza.jpeg" alt="Llaverito de cereza tejido a crochet">
+
+            <div class="info-producto">
+
+                <h3>Llaverito de Cereza</h3>
+
+                <p></p>
+
+                <span class="precio">L. 70</span>
+
+                <button class="btn-contacto" onclick="abrirRedes()">
+                    Contactar
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PRODUCTO 3 -->
+
+        <div class="producto">
+
+            <img src="Imagenes/llavero_fresa.jpeg" alt="Llaverito de fresa tejido a crochet">
+
+            <div class="info-producto">
+
+                <h3>Llaverito de fresa</h3>
+
+                <p></p>
+
+                <span class="precio">L. 70</span>
+
+                <button class="btn-contacto" onclick="abrirRedes()">
+                    Contactar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTO 4 -->
+
+        <div class="producto">
+
+            <img src="Imagenes/tulipan.jpeg" alt="Llaverito de tulipan tejido a crochet">
+
+            <div class="info-producto">
+
+                <h3>Llaverito de tulipan</h3>
+
+                <p></p>
+
+                <span class="precio">L. 70</span>
+
+                <button class="btn-contacto" onclick="abrirRedes()">
+                    Contactar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTO 5 -->
+
+        <div class="producto">
+
+            <img src="Imagenes/llavero_girasol.jpeg" alt="Llaverito de girasol tejido a crochet">
+
+            <div class="info-producto">
+
+                <h3>Llaverito de girasol</h3>
+
+                <p></p>
+
+                <span class="precio">L. 120</span>
+
+                <button class="btn-contacto" onclick="abrirRedes()">
+                    Contactar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTO 6 -->
+
+        <div class="producto">
+
+            <img src="Imagenes/producto2.jpeg" alt="Llaverito de luna y sol tejido a crochet">
+
+            <div class="info-producto">
+
+                <h3>Llaverito de luna y sol</h3>
+
+                <p></p>
+
+                <span class="precio">L. 180</span>
+
+                <button class="btn-contacto" onclick="abrirRedes()">
+                    Contactar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTO 7 -->
+
+        <div class="producto">
+
+            <img src="Imagenes/verity.jpeg" alt="Llaverito de verity tejido a crochet"">
+
+            <div class="info-producto">
+
+                <h3>Llaverito de verity</h3>
+
+                <span class="precio">L. 120</span>
+
+                <button class="btn-contacto" onclick="abrirRedes()">
+                    Contactar
+                </button>
+
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTO 8 -->
+
+        <div class="producto">
+
+            <img src="Imagenes/llaveros.jpeg" alt="Little Buddy llavero de Pokémon a crochet">
+
+            <div class="info-producto">
+
+                <h3>Little Buddy llavero Pokémon</h3>
+
+                <p>Detalles para decorar tus espacios.</p>
+
+                <span class="precio">L. 300</span>
+                
+                <button class="btn-contacto" onclick="abrirRedes()">
+                    Contactar
+                </button>
+
+            </div>
+
+        </div> 
+
+
+        <!-- PRODUCTO 9 
+
+        <div class="producto">
+
+            <img src="imagen8.jpg" alt="Producto 8">
+
+            <div class="info-producto">
+
+                <h3>Pedidos especiales</h3>
+
+                <p>Diseños personalizados bajo pedido.</p>
+
+                <span class="precio">Consultar</span>
+
+            </div>
+
+        </div> -->
+
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SOBRE MÍ
+==========================
+
+<section id="sobre-mi" class="sobre-mi">
+
+    <h2>💗 Sobre mí</h2>
+
+    <p>
+        Soy la persona detrás de Punto Popcorn. Me encanta crear
+        productos hechos a mano utilizando crochet y diferentes
+        materiales para convertir pequeñas ideas en creaciones
+        especiales.
+    </p>
+
+</section>-->
+
+
+<!-- =========================
+     COMENTARIOS
+==========================
+
+<section id="comentarios" class="sobre-mi">
+
+    <h2>💬 Comentarios</h2>
+
+    <p>
+        Tu opinión es muy importante para mí.
+        Aquí podrás compartir tu experiencia con Punto Popcorn.
+    </p>
+
+</section>-->
+
+
+<!-- =========================
+     FOOTER / CONTACTO
+========================== -->
+
+<!-- <footer> -->
+
+<section id="contacto" class="contacto">
+
+    <h2>¿Te interesa algún producto?</h2>
+
+    <p>
+        ¡Contáctame para realizar tu pedido!
+    </p>
+
+    <div class="iconos-redes">
+
+        <a href="https://wa.me/50433105669" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="https://www.instagram.com/punto_popcornhn/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@punto_popcorn" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+    </div>
+
+</section>
+
+<!-- </footer> -->
+
+
+<!-- =========================
+     MENÚ DE REDES
+========================== -->
+
+<div id="menuRedes" class="menu-redes">
+
+    <h2> ¡Contáctame y haz tu pedido! <h2>
+
+    <h4>Escríbeme por cualquiera de mis redes sociales</h4>
+
+    <div class="iconos-redes">
+
+        <a href="https://wa.me/50433105669" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+
+        <a href="https://www.instagram.com/punto_popcornhn/" target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+
+        <a href="https://www.tiktok.com/@punto_popcorn" target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+        </a>
+
+    </div>
+
+    <button class="cerrar-redes" onclick="cerrarRedes()">
+        Cerrar
+    </button>
+
+</div>
+
+
+<script>
+
+    function abrirRedes() {
+        document.getElementById("menuRedes").style.display = "block";
+    }
+
+    function cerrarRedes() {
+        document.getElementById("menuRedes").style.display = "none";
+    }
+
+</script>
+
+
+</body>
+
+</html>
